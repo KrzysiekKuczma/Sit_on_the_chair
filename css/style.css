@@ -232,7 +232,7 @@ h2 {
   height: 100px;
   border-radius: 50%;
   border: 2px solid #c2c2c2;
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
   display: block;
   margin: auto;
   font-weight: 700;
@@ -362,4 +362,39 @@ h2 {
   font-size: 2em;
   outline: none;
   border: none;
+  cursor: pointer;
+}
+.contactRightCol > button:hover {
+  background-color: #fff;
+  border: 1px solid #27c7ab;
+  color: #27c7ab;
+}
+
+/*Stopka*/
+
+footer {
+  margin: 2%;
+}
+footer * {
+  color: #c2c2c2;
+}
+#copyright {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin: 10px 0 0 0;
+}
+
+.socialMedia {
+  display: inline-block;
+  position: relative;
+  left: 20%;
+}
+
+footer .logo {
+  float: right;
+  display: inline-block;
+}
+.container > .logo * {
+  color: #c2c2c2;
 }
