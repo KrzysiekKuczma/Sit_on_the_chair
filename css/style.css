@@ -167,7 +167,7 @@ nav ul li:hover ul {
 /*Sekcja z cennikiem*/
 
 #pricing {
-  background-color: #f1f1f1;
+  background-color: #d0cfd7;
   overflow: auto;
 }
 h2 {
@@ -176,7 +176,7 @@ h2 {
   border-bottom: 7px solid #27c7ab;
   width: 30%;
   float: left;
-  margin: 0 70% 0 0;
+  margin: 3% 70% 0 0;
 }
 
 .priceContainer {
@@ -289,19 +289,77 @@ h2 {
   background-color: #f9f9f9;
 }
 
-.formLeftCol {
+.contactLeftCol{
   float: left;
-  width: 60%;
+  width: 70%;
   margin: 4% 0;
 }
 
-.formLeftCol>form input, textarea {
+.contactLeftCol > form input, textarea {
   width: 90%;
   border: 1px solid #27c7ab;
   border-radius: 5px;
   margin: 5px;
   padding: 3px;
 }
-.formLeftCol>form input {
+.contactLeftCol > form input {
   height: 30px;
+}
+
+.contactRightCol{
+  width: 30%;
+  margin: 4% 0;
+  float: right;
+}
+
+.contactRightCol > img {
+   display: block;
+   margin: 0 auto;
+ }
+
+.checkbox {
+  float: left;
+  height: 40px;
+  margin: 10% auto;
+  position: relative;
+}
+.checkbox > input[type="checkbox"] + label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+.checkbox label {
+  line-height: 1.4em;
+}
+
+.checkbox > input[type="checkbox"] + label:before {
+  content: " ";
+  display: inline-block;
+  float: left;
+  margin-right: 0.2em;
+  width: 42px;
+  height: 42px;
+  margin-right: 0.5em;
+  border: 1px solid #27c7ab;
+}
+.checkbox > input[type="checkbox"]:checked + label:before {
+  background-image: url("../images/form_ok.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contactRightCol > button {
+  display: block;
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #27c7ab;
+  color: #fff;
+  font-size: 2em;
+  outline: none;
+  border: none;
 }
