@@ -27,9 +27,11 @@ header > .container {
   float: left;
   text-transform: uppercase;
   margin: 10px auto;
+  font-weight: 400;
+  color: white;
 
 }
-.logo span {
+.logo > span {
   font-weight: bold;
   color: #27c7ab;
 }
@@ -59,7 +61,6 @@ nav ul li {
 }
 nav ul li *{
   font-weight: normal;
-  transition: 300ms ease-in-out;
 }
 nav > ul li:hover {
   background-color: #27c7ab;
@@ -100,6 +101,13 @@ nav > ul ul li:first-of-type {
 nav > ul ul li:last-of-type {
   border-radius: 0 0 10px 10px;
 }
+
+/*Animacja przejścia dla przycisków i paska nawigacji*/
+
+nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer input:hover {
+  transition: 300ms ease-in-out;
+}
+
 /*sekcja ze sliderem*/
 
 #headed {
@@ -162,6 +170,11 @@ nav > ul ul li:last-of-type {
   color: white;
   text-align: center;
   font-size: 1.5em;
+}
+.smallContainer input:hover{
+  background-color: #f9f9f9;
+  color: #27c7ab;
+  border: 2px solid #27c7ab;
 }
 
 /*Sekcja z trzema kontenerami*/
@@ -228,12 +241,12 @@ h2 {
   float: left;
   display: inline-block;
   width: 30%;
-  border: 2px solid #c2c2c2;
+  border: 2px solid  #969696;
   background-color: #f9f9f9;
   text-align: center;
   padding: 30px 0 0 0;
   position: relative;
-  color: #c2c2c2;
+  color:  #969696;
 }
 .priceContainer:nth-last-of-type(2n+2){
   background-color: #27c7ab;
@@ -244,7 +257,7 @@ h2 {
   position: relative;
   margin: auto;
   top: -22%;
-  border: 2px solid #c2c2c2;
+  border: 2px solid  #969696;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -259,7 +272,7 @@ h2 {
   top: 25%;
   width: 50%;
   height: 50%;
-  background-color: #c2c2c2;
+  background-color:  #969696;
   border-radius: 50%;
   z-index: 3;
   margin: auto;
@@ -273,14 +286,14 @@ h2 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid #c2c2c2;
+  border: 2px solid  #969696;
   background-color: #f9f9f9;
   display: block;
   margin: auto;
   font-weight: 700;
 }
 .priceCircle * {
-  color: #c2c2c2;
+  color:  #969696;
 }
 .priceContainer:nth-last-of-type(2n+2) .priceCircle * {
   color: #27c7ab;
@@ -306,7 +319,7 @@ h2 {
   position: relative;
   top: 5%;
   width: 100%;
-  background-color: #c2c2c2;
+  background-color:  #969696;
 }
 .pricingFeatures > p {
   padding: 5px;
@@ -331,7 +344,6 @@ h2 {
 }
 
 .pricingBtn:hover {
-  transition: 300ms ease-in-out;
   color: #27c7ab;
   background-color: #f9f9f9;
   border: 1px solid #27c7ab;
@@ -421,7 +433,6 @@ h2 {
   cursor: pointer;
 }
 .contactRightCol > button:hover {
-  transition: 300ms ease-in-out;
   background-color: #fff;
   border: 1px solid #27c7ab;
   color: #27c7ab;
@@ -433,7 +444,7 @@ footer {
   margin: 2%;
 }
 footer * {
-  color: #c2c2c2;
+  color:  #969696;
 }
 #copyright {
   display: inline-block;
@@ -452,6 +463,9 @@ footer .logo {
   float: right;
   display: inline-block;
 }
-.container > .logo * {
-  color: #c2c2c2;
+footer .logo {
+  color:  #969696
+}
+footer .logo span{
+  color: #969696;
 }
