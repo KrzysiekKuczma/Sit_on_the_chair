@@ -105,7 +105,12 @@ nav > ul ul li:last-of-type {
 /*Animacja przejścia dla przycisków i paska nawigacji*/
 
 nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer input:hover {
+
   transition: 300ms ease-in-out;
+}
+.pricingBtn:hover, .contactRightCol > button:hover, .smallContainer input:hover {
+  box-shadow: 1px 1px #4a5655;
+  text-shadow: 1px 1px #4a5655;
 }
 
 /*sekcja ze sliderem*/
@@ -172,7 +177,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   font-size: 1.5em;
 }
 .smallContainer input:hover{
-  background-color: #f9f9f9;
+  background-color: transparent;
   color: #27c7ab;
   border: 2px solid #27c7ab;
 }
