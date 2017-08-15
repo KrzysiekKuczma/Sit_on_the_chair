@@ -3,9 +3,91 @@
 .x {
   content: 100px maxWidth; }
 
-* {
-  box-sizing: border-box; }
+.grid-container {
+  position: relative;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto; }
+  .grid-container .row {
+    overflow: auto; }
+    .grid-container .row [class*='col-'] {
+      float: left;
+      min-height: 1px;
+      padding: 12px; }
+    .grid-container .row .col-12 {
+      width: 100%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-12 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-11 {
+      width: 91.66667%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-11 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-10 {
+      width: 83.33333%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-10 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-9 {
+      width: 75%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-9 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-8 {
+      width: 66.66667%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-8 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-7 {
+      width: 58.33333%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-7 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-6 {
+      width: 50%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-6 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-5 {
+      width: 41.66667%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-5 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-4 {
+      width: 33.33333%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-4 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-3 {
+      width: 25%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-3 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-2 {
+      width: 16.66667%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-2 {
+          float: none;
+          width: 100%; } }
+    .grid-container .row .col-1 {
+      width: 8.33333%; }
+      @media (max-width: 550px) {
+        .grid-container .row .col-1 {
+          float: none;
+          width: 100%; } }
 
+/* Fonts */
 * {
   margin: 0 auto;
   padding: 0;
@@ -18,16 +100,14 @@
 header {
   background-color: #000;
   width: 100%;
-  color: white; }
-
-header > .container {
-  overflow: visible; }
-
-.container {
-  width: 75%;
-  overflow: auto; }
+  color: white;
+  overflow: visible;
+  position: relative; }
+  header .grid-container {
+    overflow: visible; }
 
 .logo {
+  position: relative;
   display: inline-block;
   float: left;
   text-transform: uppercase;
@@ -39,65 +119,54 @@ header > .container {
   font-weight: bold;
   color: #27c7ab; }
 
-.clearfix:after {
-  display: block;
-  clear: both;
-  content: ""; }
-
 nav {
+  position: relative;
   float: right;
   width: 50%; }
 
 nav > ul {
   float: inherit;
   font-weight: 700; }
-
-nav ul li {
-  list-style: none;
-  color: white;
-  background-color: black;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  width: 100px; }
-
-nav ul li * {
-  font-weight: normal; }
-
-nav > ul li:hover {
-  background-color: #27c7ab; }
-
-nav > ul > li {
-  display: inline-block; }
-
-nav > ul li a {
-  width: 120px;
-  text-decoration: none;
-  color: inherit; }
-
-nav ul ul {
-  top: 80%;
-  position: absolute;
-  visibility: hidden;
-  opacity: 0; }
-
-nav ul ul:before {
-  content: "";
-  border-bottom: 10px solid black;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  position: relative;
-  top: -9px; }
-
-nav > ul li:hover ul {
-  visibility: visible;
-  opacity: 1; }
-
-nav > ul ul li:first-of-type {
-  border-radius: 10px 10px 0 0; }
-
-nav > ul ul li:last-of-type {
-  border-radius: 0 0 10px 10px; }
+  nav > ul ul {
+    top: 80%;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0; }
+    nav > ul ul:before {
+      position: relative; }
+      nav > ul ul:before:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #000;
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translate(-50%, 0); }
+    nav > ul ul li {
+      position: absolute;
+      display: none; }
+  nav > ul li {
+    display: inline-block;
+    list-style: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 0.625rem 0;
+    position: relative;
+    width: 6.250rem; }
+  nav > ul li:hover {
+    background-color: #27c7ab; }
+    nav > ul li:hover ul {
+      visibility: visible;
+      opacity: 1; }
+      nav > ul li:hover ul li {
+        display: inline-block; }
+  nav > ul li a {
+    width: 7.5rem;
+    text-decoration: none;
+    color: inherit; }
 
 /*Animacja przejścia dla przycisków i paska nawigacji*/
 nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer input:hover {
@@ -186,7 +255,10 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   background-repeat: no-repeat;
   opacity: 1; }
   .rowContainer:hover .innerRowContainer {
-    transition: 500ms ease-in-out;
+    -webkit-transition: 300ms linear;
+    -ms-transition: 300ms linear;
+    -o-transition: 300ms linear;
+    transition: 300ms linear;
     opacity: 0; }
 
 .rowContainer:first-of-type {
@@ -200,6 +272,10 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   padding: 20px; }
 
 .innerRowContainer {
+  -webkit-transition: 300ms linear;
+  -ms-transition: 300ms linear;
+  -o-transition: 300ms linear;
+  transition: 300ms linear;
   position: absolute;
   width: 100%;
   height: 60px;
@@ -212,7 +288,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   position: relative;
   display: block;
   width: 200px;
-  margin: 0  0 15px;
+  margin: 0    0 15px;
   border-bottom: 7px solid #27c7ab; }
 
 /*Sekcja z cennikiem*/
@@ -235,7 +311,7 @@ h2 {
   float: left;
   display: inline-block;
   width: 30%;
-  border: 2px solid  #969696;
+  border: 2px solid    #969696;
   background-color: #f9f9f9;
   text-align: center;
   padding: 30px 0 0 0;
@@ -251,7 +327,7 @@ h2 {
   position: relative;
   margin: auto;
   top: -22%;
-  border: 2px solid  #969696;
+  border: 2px solid    #969696;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -280,7 +356,7 @@ h2 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid  #969696;
+  border: 2px solid    #969696;
   background-color: #f9f9f9;
   display: block;
   margin: auto;
