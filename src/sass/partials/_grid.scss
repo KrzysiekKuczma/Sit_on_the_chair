@@ -1,0 +1,39 @@
+@import "variables";
+
+.grid-container {
+    width: 100%;
+    // max-width: $containerFullWidth;
+    margin: 0 auto;
+    .row{
+        overflow: auto;
+        &::before,
+        &::after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        [class*='col-']{
+            float: left;
+            min-height: 1px;
+            padding: 12px;
+            border: 5px solid red;
+        }
+        $i: $columns;
+
+        @while $i > 0 {
+            .col-#{$i}{
+                width: $i * $columnWidth;
+                @media(max-width: 550px){
+                    float: none;
+                    width: 100%;
+                }
+            }
+            $i: $i - 1;
+        }
+
+
+    }
+
+
+}

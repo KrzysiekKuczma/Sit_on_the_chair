@@ -1,3 +1,9 @@
+@import "partials/mixins";
+@import "partials/colors";
+
+* {
+    box-sizing: border-box;
+}
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 * {
@@ -33,7 +39,7 @@ header > .container {
 }
 .logo > span {
   font-weight: bold;
-  color: #27c7ab;
+  color: $mainColor;
 }
 
 .clearfix:after {
@@ -63,7 +69,7 @@ nav ul li *{
   font-weight: normal;
 }
 nav > ul li:hover {
-  background-color: #27c7ab;
+  background-color: $mainColor;
 }
 nav > ul > li {
   display: inline-block;
@@ -128,9 +134,13 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
 .arrow {
   display: inline-block;
   width: 10%;
-  color: #27c7ab;
+  color: $mainColor;
   font-size: 4em;
   margin: 218px 0 218px 0;
+
+  &:hover{
+    cursor: pointer
+  }
 }
 .left {
   float: left;
@@ -160,7 +170,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   font-weight: normal;
 }
 .smallContainer span {
-  color: #27c7ab;
+  color: $mainColor;
   font-weight: bold;
 }
 .smallContainer p {
@@ -168,7 +178,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
 }
 .smallContainer input {
   padding: 10px 20px 10px 20px;
-  background-color: #27c7ab;
+  background-color: $mainColor;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -178,8 +188,8 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
 }
 .smallContainer input:hover{
   background-color: transparent;
-  color: #27c7ab;
-  border: 2px solid #27c7ab;
+  color: $mainColor;
+  border: 2px solid $mainColor;
 }
 
 /*Sekcja z trzema kontenerami*/
@@ -193,6 +203,14 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   margin: 0.5%;
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 1;
+
+  &:hover{
+      & .innerRowContainer{
+          transition: 500ms ease-in-out;
+          opacity: 0;
+      }
+  }
 }
 .rowContainer:first-of-type {
   background-image: url("../images/box1_img.jpg");
@@ -214,6 +232,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   background-color: rgba(255, 255, 255, 0.4);
   margin: 120px 0 0 0;
   padding: 20px 10px 0 10px;
+  opacity: 1;
 }
 
 .smallHeader {
@@ -221,7 +240,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   display: block;
   width: 200px;
   margin: 0  0 15px;
-  border-bottom: 7px solid #27c7ab;
+  border-bottom: 7px solid $mainColor;
 }
 
 /*Sekcja z cennikiem*/
@@ -233,7 +252,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
 h2 {
   display:block;
   text-transform: uppercase;
-  border-bottom: 7px solid #27c7ab;
+  border-bottom: 7px solid $mainColor;
   width: 30%;
   float: left;
   margin: 3% 70% 0 0;
@@ -254,8 +273,8 @@ h2 {
   color:  #969696;
 }
 .priceContainer:nth-last-of-type(2n+2){
-  background-color: #27c7ab;
-  border: 2px solid #27c7ab;
+  background-color: $mainColor;
+  border: 2px solid $mainColor;
   color: #f9f9f9;
 }
 .priceContainerCircle {
@@ -301,7 +320,7 @@ h2 {
   color:  #969696;
 }
 .priceContainer:nth-last-of-type(2n+2) .priceCircle * {
-  color: #27c7ab;
+  color: $mainColor;
 }
 .price {
   position: relative;
@@ -338,7 +357,7 @@ h2 {
   position: absolute;
   left: 35%;
   top: 90%;
-  background-color: #27c7ab;
+  background-color: $mainColor;
   color: white;
   font-size: 1em;
   padding: 5px 7px;
@@ -349,17 +368,17 @@ h2 {
 }
 
 .pricingBtn:hover {
-  color: #27c7ab;
+  color: $mainColor;
   background-color: #f9f9f9;
-  border: 1px solid #27c7ab;
+  border: 1px solid $mainColor;
 }
 .priceContainer:nth-last-of-type(2n+2) .pricingBtn {
-  color: #27c7ab;
+  color: $mainColor;
   background-color: #f9f9f9;
 }
 .priceContainer:nth-last-of-type(2n+2) .pricingBtn:hover {
   color: #f9f9f9;
-  background-color: #27c7ab;
+  background-color: $mainColor;
   border: 1px solid #f9f9f9;
 }
 .contactLeftCol{
@@ -370,7 +389,7 @@ h2 {
 
 .contactLeftCol > form input, textarea {
   width: 90%;
-  border: 1px solid #27c7ab;
+  border: 1px solid $mainColor;
   border-radius: 5px;
   margin: 5px;
   padding: 3px;
@@ -416,7 +435,7 @@ h2 {
   width: 42px;
   height: 42px;
   margin-right: 0.5em;
-  border: 1px solid #27c7ab;
+  border: 1px solid $mainColor;
 }
 .checkbox > input[type="checkbox"]:checked + label:before {
   background-image: url("../images/form_ok.jpg");
@@ -430,7 +449,7 @@ h2 {
   margin: 15px auto;
   padding: 10px;
   border-radius: 10px;
-  background-color: #27c7ab;
+  background-color: $mainColor;
   color: #fff;
   font-size: 2em;
   outline: none;
@@ -439,8 +458,8 @@ h2 {
 }
 .contactRightCol > button:hover {
   background-color: #fff;
-  border: 1px solid #27c7ab;
-  color: #27c7ab;
+  border: 1px solid $mainColor;
+  color: $mainColor;
 }
 
 /*Stopka*/

@@ -1,0 +1,10 @@
+$tablet: '(min-width: 640ps) and (max-width: 1023px)';
+$desktop: '(min-width: 1024px)';
+
+$tab: 640px;
+
+$columns: 12;
+$containerFullWidth: 100%;
+$containerWidth: 100%;
+
+$columnWidth: $containerFullWidth/$columns;

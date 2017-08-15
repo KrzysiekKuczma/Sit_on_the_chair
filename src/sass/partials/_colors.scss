@@ -1,0 +1,31 @@
+$colors: #79a868 #ab8d48 #7e94bb;
+$mainColor: #27c7ab;
+
+
+$mapWidth: (
+    maxWidth: 100%,
+    midWidth: 75%,
+    smallWidth: 50%
+);
+
+
+$minWidth: 100px;
+$maxWidth: 500px;
+
+$mapa:(
+    min: $minWidth,
+    max: maxWidth
+);
+
+$list: null;
+//append((10px 20px), 40px)
+
+$min: map-get($mapa, min); //poieram min z mapy
+$list: append($list, $min);//dolaczam min z mapy
+
+$max : map-get($mapa, max); //pobieram max z mapy
+$list : append($list, $max);//dolaczam max z mapy
+
+.x {
+    content: $list;
+}
