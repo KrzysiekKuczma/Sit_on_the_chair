@@ -21,7 +21,7 @@ header {
     overflow: visible;
     position: relative;
 
-    & .grid-container {
+    & .grid-container, .row, .col-12 {
         overflow: visible;
     }
 }
@@ -42,25 +42,38 @@ header {
 }
 
 nav {
-    position: relative;
+    position: absolute;
     float: right;
     width: 50%;
+    left: 50%;
 }
 nav > ul {
         float: inherit;
         font-weight: 700;
         ul {
-            top: 80%;
+            top: 120%;
             position: absolute;
             visibility: hidden;
             opacity: 0;
 
             &:before{
                 @include arrow('top', #000);
+
+                position: relative;
+                top: -9px;
             }
             li{
-                position: absolute;
                 display: none;
+
+                &:first-of-type {
+                    border-radius: .5rem .5rem 0 0;
+                }
+                &:last-of-type {
+                    border-radius: 0 0 .5rem .5rem;
+                }
+                &:hover{
+                    display:block;
+                }
             }
         }
         li{
@@ -76,6 +89,7 @@ nav > ul {
         }
 
         li:hover{
+        display: inline-block;
         background-color: $mainColor;
             ul{
                 visibility: visible;
