@@ -8,3 +8,10 @@ $containerFullWidth: 100%;
 $maxWidth: 75rem;
 
 $columnWidth: $containerFullWidth/$columns;
+
+
+/* Stakeholders */
+
+%transition{
+    transition: 300ms ease-in-out;
+}

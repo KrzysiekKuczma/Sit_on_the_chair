@@ -1,23 +1,25 @@
 @import "variables";
 
 .grid-container {
-    position: relative;
+    // position: relative;
     width: 100%;
     max-width: $maxWidth;
     margin: 0 auto;
     .row{
         overflow: auto;
-        // &::before,
-        // &::after {
-        //     content: " ";
-        //     display: table;
-        //     clear: both;
-        // }
+        &::before,
+        &::after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
 
         [class*='col-']{
+            position: relative;
             float: left;
             min-height: 1px;
             padding: 0;
+            overflow: auto;
         }
         $i: $columns;
 
