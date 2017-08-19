@@ -393,10 +393,10 @@ h2 {
       /* 50/16 */ } }
   @media (min-width: 1024px) {
     .priceContainerCircle {
-      top: -11vw;
-      width: 10vw;
+      top: -9rem;
+      width: 10rem;
       /* 50/16 */
-      height: 10vw;
+      height: 10rem;
       /* 50/16 */ } }
 
 .priceContainerCircleSmall {
