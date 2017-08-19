@@ -1,7 +1,9 @@
-$tablet: '(min-width: 640ps) and (max-width: 1023px)';
-$desktop: '(min-width: 1024px)';
+/* device widths */
 
-$tab: 640px;
+$smartphone: 'max-width: 600px';
+$tablet: 'min-width: 601px) and (max-width: 1023px';
+$desktop: 'min-width: 1024px';
+
 
 $columns: 12;
 $containerFullWidth: 100%;

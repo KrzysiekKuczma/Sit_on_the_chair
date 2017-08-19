@@ -274,16 +274,26 @@ h2 {
 }
 
 .priceContainerCircle {
-    position: absolute;
-    margin: auto;
-    top: -4vw;
-    left: 10vw;
+    position: relative;
+    margin: 0 auto;
+    top: -30vw;
     border: 0.125rem  solid $grey-background; /* 2/16 */
-    width: 10vw; /* 50/16 */
-    height: 10vw; /* 50/16 */
+    width: 30vw; /* 50/16 */
+    height: 30vw; /* 50/16 */
     border-radius: 50%;
     z-index: 2;
     background-color: inherit;
+
+    @media ($tablet){
+        top: -17vw;
+        width: 15vw; /* 50/16 */
+        height: 15vw; /* 50/16 */
+    }
+    @media ($desktop){
+        top: -11vw;
+        width: 10vw; /* 50/16 */
+        height: 10vw; /* 50/16 */
+    }
 }
 .priceContainerCircleSmall{
     position: relative;

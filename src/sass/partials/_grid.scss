@@ -25,9 +25,12 @@
         @while $i > 0 {
             .col-#{$i}{
                 width: $i * $columnWidth;
-                @media(max-width: 550px){
+                @media ($smartphone) {
                     float: none;
                     width: 100%;
+                }
+                @media ($tablet) {
+                    width: 50%;
                 }
             }
             $i: $i - 1;
