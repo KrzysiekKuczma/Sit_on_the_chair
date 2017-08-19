@@ -4,6 +4,7 @@ var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer')
 
 gulp.task('serve',function() {
     browserSync.init({
@@ -23,6 +24,9 @@ gulp.task('sass', function () {
     }))
     .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream({match: '**/*.css'}));

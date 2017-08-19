@@ -3,12 +3,13 @@
         content: " ";
         /* Older browser do not support empty content */
         visibility: hidden;
+        width: 100%;
         display: block;
         height: 0;
         clear: both;
     }
 }
-@mixin arrow($direction, $color: #ff0000, $size: .5rem) {
+@mixin arrow($direction, $color: #ff0000, $size: .5rem, $position: 50%) {
     position: absolute;
     &:before {
         content: '';
@@ -17,26 +18,27 @@
         border: $size solid transparent;
         position: absolute;
 
+
         @if $direction == 'top' {
             border-bottom-color: $color;
-            left: 50%;
+            left: 30%;
             top: -($size*2);
-            transform: translate(-50%, 0);
+            transform: translate(-$position, 0);
         } @if $direction == 'bottom' {
             border-top-color: $color;
-            left: 50%;
+            left: $position;
             bottom: -($size*2);
-            transform: translate(-50%, 0);
+            transform: translate(-$position, 0);
         } @if $direction == 'right' {
             border-left-color: $color;
-            top: 50%;
+            top: $position;
             right: -($size*2);
-            transform: translate( 0, -50%);
+            transform: translate( 0, -$position);
         } @if $direction =='left' {
             border-right-color: $color;
-            top: 50%;
+            top: $position;
             left: -($size*2);
-            transform: translate( 0, -50%);
+            transform: translate( 0, -$position);
         }
     }
 }
