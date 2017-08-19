@@ -51,10 +51,13 @@ nav{
             }
 
             &.dropdown{
+                position: relative;
+
                 &:hover > .dropdown-content{
-                position: absolute;
-                display: block;
-                opacity: 1;
+                    position: absolute;
+                    display: block;
+                    opacity: 1;
+                    z-index: 2;
                 }
             }
             ul.dropdown-content{
