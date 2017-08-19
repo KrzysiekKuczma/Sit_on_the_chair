@@ -347,13 +347,14 @@ h2 {
     top: 3rem;
     width: 100%;
     background-color: $grey-background;
-}
-.pricingFeatures > p {
-    padding: 0.313rem; /* 5/16 */
-    color: $features;
-}
-.pricingFeatures > p:nth-child(2n+2) {
-    background-color: $white-bacground;
+    
+    & > p {
+        padding: 0.313rem; /* 5/16 */
+        color: $features;
+    }
+    & > p:nth-child(2n+2) {
+        background-color: $white-bacground;
+    }
 }
 
 .pricingBtn {
