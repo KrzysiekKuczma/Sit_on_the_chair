@@ -104,7 +104,7 @@ nav{
 /*sekcja ze sliderem*/
 
 #headed {
-    height: 31.25rem; /* 500/16 */
+    // height: 31.25rem; /* 500/16 */
     width: 100%;
     background: #ffffff;
     background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 53%, #cac9d1 100%);
@@ -115,10 +115,12 @@ nav{
 
 .arrow {
     display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     color: $mainColor;
     padding: .5rem;
     font-size: 4em;
-    margin: 13.625rem 0 13.625rem 0;
     text-align: center;
 
     &:hover{
@@ -126,25 +128,28 @@ nav{
     }
 }
 .left {
+    left: 0;
     float: left;
 }
 .right {
+    right: 0;
     float: right;
 }
 .blackChair {
-    margin: 4rem 0 0 0;
+    margin: 2rem 0 0 0;
     float: left;
     display: inline-block;
     width: 100%;
-    height: 21.25rem;
+    height: 25rem;
     background-image: url("../images/black_chair.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    background-size: contain;
 }
 
 .features{
-    margin: 10rem 0 0 0;
     text-align: center;
+    padding: 5rem;
     h1{
         text-transform: uppercase;
         margin: 0 auto;
@@ -254,13 +259,12 @@ h2 {
     position: relative;
     width: 90%;
     min-height: 40rem; /* 420/16 */
-    margin: 5rem 0 2.2rem 1.1rem;
+    margin: 8rem 0 2.2rem 1.1rem;
     float: left;
     display: inline-block;
     border: 0.125rem solid $grey-background; /* 2/16 */
-    background-color: $white-bacground;
+    background-color: $white-background;
     text-align: center;
-    padding: 1.875rem 0 0 0; /* 30/16 */
     position: relative;
     color: $grey-background;
 
@@ -269,28 +273,28 @@ h2 {
     font-size: 2rem;
     display: block;
     position: relative;
-    top: 3vw;
+    top: 6.25rem;
     }
 }
 
 .priceContainerCircle {
     position: relative;
     margin: 0 auto;
-    top: -30vw;
+    top: -7.25rem;
     border: 0.125rem  solid $grey-background; /* 2/16 */
-    width: 30vw; /* 50/16 */
-    height: 30vw; /* 50/16 */
+    width: 9.25rem; /* 50/16 */
+    height: 9.25rem; /* 50/16 */
     border-radius: 50%;
     z-index: 2;
     background-color: inherit;
 
     @media ($tablet){
-        top: -17vw;
-        width: 15vw; /* 50/16 */
-        height: 15vw; /* 50/16 */
+        top: -8.5rem;
+        width: 12.5rem; /* 50/16 */
+        height: 12.5rem; /* 50/16 */
     }
     @media ($desktop){
-        top: -9rem;
+        top: -8rem;
         width: 10rem; /* 50/16 */
         height: 10rem; /* 50/16 */
     }
@@ -308,12 +312,12 @@ h2 {
 
 .priceCircle {
     position: relative;
-    top: 5vw;
-    width: 15vw;
-    height: 15vw;
+    bottom: 2rem;
+    width: 12.5rem;
+    height: 12.5rem;
     border-radius: 50%;
     border: 0.125rem solid $grey-background; /* 2/16 */
-    background-color: $white-bacground;
+    background-color: $white-background;
     display: block;
     margin: auto;
     font-weight: 700;
@@ -322,17 +326,27 @@ h2 {
     * {
         color: $grey-background;
     }
-    & > p > span {
-        position:relative;
-        top: -0.7rem;
-        font-size: 3vh;
-    }
 }
 
 .price {
     position: relative;
-    top: 33%;
-    font-size: 5vh;
+    top: 25%;
+    font-size: 4rem;
+    
+    & > span {
+        position:relative;
+        top: -1.5rem;
+        font-size: 2rem;
+    }
+
+    @media ($desktop){
+        font-size: 5rem;
+
+        & > span {
+            top: -2rem;
+            font-size: 3rem;
+        }
+    }
 }
 
 .subscription {
@@ -340,11 +354,11 @@ h2 {
     line-height: 1.2rem;
     font-size: 0.8rem;
     position: relative;
-    top: 35%;
+    top: 30%;
 }
 .pricingFeatures {
     position: relative;
-    top: 3rem;
+    top: 1rem;
     width: 100%;
     background-color: $grey-background;
     
@@ -353,7 +367,7 @@ h2 {
         color: $features;
     }
     & > p:nth-child(2n+2) {
-        background-color: $white-bacground;
+        background-color: $white-background;
     }
 }
 
@@ -377,7 +391,7 @@ h2 {
 
 .pricingBtn:hover {
     color: $mainColor;
-    background-color: $white-bacground;
+    background-color: $white-background;
     border: 0.063rem solid $mainColor; /* 1/16 */
 }
 .reversed {
@@ -385,21 +399,21 @@ h2 {
     border: none;
     background-color: $mainColor;
     border: 0.125rem solid $mainColor; /* 2/16 */
-    color: $white-bacground;
+    color: $white-background;
     .priceCircle * {
        color: $mainColor;
     }
     .priceContainerCircleSmall{
-        background-color: $white-bacground;
+        background-color: $white-background;
     }
     .pricingBtn {
         color: $mainColor;
-        background-color: $white-bacground;
+        background-color: $white-background;
     }
         .pricingBtn:hover {
-        color: $white-bacground;
+        color: $white-background;
         background-color: $mainColor;
-        border: 0.063rem solid $white-bacground; /* 1/16 */
+        border: 0.063rem solid $white-background; /* 1/16 */
     }
 }
 
@@ -475,20 +489,21 @@ h2 {
 
 
 .contactRightCol > button {
+    @extend %transition;
     display: block;
     width: 100%;
     margin: 0.938rem auto; /* 15/16 */
     padding: 0.625rem; /* 10/16 */
     border-radius: 0.625rem; /* 10/16 */
     background-color: $mainColor;
-    color: #fff;
+    color: $white-background;
     font-size: 2em;
     outline: none;
     border: none;
     cursor: pointer;
 }
 .contactRightCol > button:hover {
-    background-color: #fff;
+    background-color: $white-background;
     border: 0.063rem solid $mainColor; /* 1/16 */
     color: $mainColor;
 }

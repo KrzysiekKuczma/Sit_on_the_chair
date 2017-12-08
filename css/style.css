@@ -127,6 +127,7 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
 
 .arrow {
   display: inline-block;
+  position: absolute;
   width: 10%;
   color: #27c7ab;
   font-size: 4em;
@@ -149,38 +150,6 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   background-size: cover;
 }
 
-.smallContainer {
-  display: inline-block;
-  width: 40%;
-  margin: 180px 0 0 0;
-  text-align: center;
-}
-.smallContainer h1 {
-  text-transform: uppercase;
-  font-weight: normal;
-}
-.smallContainer span {
-  color: #27c7ab;
-  font-weight: bold;
-}
-.smallContainer p {
-  margin: 20px 30px 30px 20px;
-}
-.smallContainer input {
-  padding: 10px 20px 10px 20px;
-  background-color: #27c7ab;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  color: white;
-  text-align: center;
-  font-size: 1.5em;
-}
-.smallContainer input:hover{
-  background-color: transparent;
-  color: #27c7ab;
-  border: 2px solid #27c7ab;
-}
 
 /*Sekcja z trzema kontenerami*/
 
@@ -223,6 +192,40 @@ nav ul li *, .pricingBtn:hover, .contactRightCol > button:hover, .smallContainer
   margin: 0  0 15px;
   border-bottom: 7px solid #27c7ab;
 }
+
+.smallContainer {
+  display: inline-block;
+  width: 40%;
+  margin: 180px 0 0 0;
+  text-align: center;
+}
+.smallContainer h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.smallContainer span {
+  color: #27c7ab;
+  font-weight: bold;
+}
+.smallContainer p {
+  margin: 20px 30px 30px 20px;
+}
+.smallContainer input {
+  padding: 10px 20px 10px 20px;
+  background-color: #27c7ab;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+}
+.smallContainer input:hover{
+  background-color: transparent;
+  color: #27c7ab;
+  border: 2px solid #27c7ab;
+}
+
 
 /*Sekcja z cennikiem*/
 
